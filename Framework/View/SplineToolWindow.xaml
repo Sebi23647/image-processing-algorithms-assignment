@@ -1,0 +1,232 @@
+﻿<Window x:Class="Framework.View.SplineToolWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Framework.View"
+        mc:Ignorable="d"
+        Title="SplineToolWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <Canvas Name="LeftDrawingCanvas" Background="White" Grid.Column="0" Margin="20,0,0,0" MouseLeftButtonDown="LeftDrawingCanvas_MouseLeftButtonDown">
+            <!-- Coordonatele sistemului de desen rămân neschimbate -->
+            <Line X1="20" Y1="0" X2="20" Y2="275" Stroke="Black" />
+            <Line X1="20" Y1="275" X2="275" Y2="275" Stroke="Black" />
+            <TextBlock Text="0" Foreground="Black" Canvas.Left="0" Canvas.Top="275" />
+            <TextBlock Text="255" Foreground="Black" Canvas.Left="265" Canvas.Top="275" />
+            <TextBlock Text="255" Foreground="Black" Canvas.Left="0" Canvas.Top="0" />
+            <Line X1="20" Y1="275" X2="275" Y2="20" Stroke="Gray" StrokeDashArray="2 2"/>
+        </Canvas>
+
+        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+            <Button Content="Clear" Width="100" Height="30" Margin="10" Click="ClearButton_Click" />
+            <!-- Legarea comenzii pentru Draw Spline -->
+            <Button Content="Draw Spline" 
+                    Width="100" 
+                    Height="30" 
+                    Margin="10"
+                    Command="{Binding MenuCommands.ApplyLUTAndDrawSplineCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"/>
+        </StackPanel>
+
+        <Canvas Name="RightDrawingCanvas" Background="White" Grid.Column="2">
+        </Canvas>
+    </Grid>
+</Window>
+
+
+
+<!--...-->
+    <!--<Window x:Class="Framework.View.SplineToolWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Framework.View"
+        mc:Ignorable="d"
+        Title="SplineToolWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <Canvas Name="LeftDrawingCanvas" Background="White" Grid.Column="0" Margin="20,0,0,0" MouseLeftButtonDown="LeftDrawingCanvas_MouseLeftButtonDown">
+            <Line X1="20" Y1="0" X2="20" Y2="275" Stroke="Black" />
+            <Line X1="20" Y1="275" X2="275" Y2="275" Stroke="Black" />
+            <TextBlock Text="0" Foreground="Black" Canvas.Left="0" Canvas.Top="275" />
+            <TextBlock Text="255" Foreground="Black" Canvas.Left="265" Canvas.Top="275" />
+            <TextBlock Text="255" Foreground="Black" Canvas.Left="0" Canvas.Top="0" />
+            <Line X1="20" Y1="275" X2="275" Y2="20" Stroke="Gray" StrokeDashArray="2 2"/>
+        </Canvas>
+
+        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+            <Button Content="Clear" Width="100" Height="30" Margin="10" Click="ClearButton_Click" />
+            <Button Content="Draw Spline" Width="100" Height="30" Margin="10" Click="DrawSplineButton_Click" />
+        </StackPanel>
+
+        <Canvas Name="RightDrawingCanvas" Background="White" Grid.Column="2">
+        </Canvas>
+    </Grid>
+</Window>-->
+    
+    <!--<Window x:Class="Framework.View.SplineToolWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Framework.View"
+        mc:Ignorable="d"
+        Title="SplineToolWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        --><!-- Left Drawing Area --><!--
+        <Canvas Name="LeftDrawingCanvas" Background="White" Grid.Column="0" Margin="20,0,0,0" MouseLeftButtonDown="LeftDrawingCanvas_MouseLeftButtonDown">
+            --><!-- Coordinate System --><!--
+            <Line X1="20" Y1="0" X2="20" Y2="275" Stroke="Black" />
+            <Line X1="20" Y1="275" X2="275" Y2="275" Stroke="Black" />
+            <TextBlock Text="0" Foreground="Black" Canvas.Left="0" Canvas.Top="275" />
+            <TextBlock Text="255" Foreground="Black" Canvas.Left="265" Canvas.Top="275" />
+            <TextBlock Text="255" Foreground="Black" Canvas.Left="0" Canvas.Top="0" />
+            --><!-- Diagonal Line --><!--
+            <Line X1="20" Y1="275" X2="275" Y2="20" Stroke="Gray" StrokeDashArray="2 2"/>
+        </Canvas>
+
+        --><!-- Middle Area with Buttons --><!--
+        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+            <Button Content="Clear" Width="100" Height="30" Margin="10" Click="ClearButton_Click" />
+            <Button Content="Draw Spline" Width="100" Height="30" Margin="10" Click="DrawSplineButton_Click" />
+        </StackPanel>
+
+        --><!-- Right Drawing Area --><!--
+        <Canvas Name="RightDrawingCanvas" Background="White" Grid.Column="2">
+            --><!-- This will be used for drawing the spline curve --><!--
+        </Canvas>
+    </Grid>
+</Window>-->
+    
+    <!--the best-->
+    <!--<Window x:Class="Framework.View.SplineToolWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Framework.View"
+        mc:Ignorable="d"
+        Title="SplineToolWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        --><!-- Left Drawing Area --><!--
+        <Canvas Name="LeftDrawingCanvas" Background="White" Grid.Column="0" Margin="20,0,0,0" MouseLeftButtonDown="LeftDrawingCanvas_MouseLeftButtonDown">
+            --><!-- Coordinate System --><!--
+            <Line X1="20" Y1="0" X2="20" Y2="275" Stroke="Black" />
+            <Line X1="20" Y1="275" X2="275" Y2="275" Stroke="Black" />
+            <TextBlock Text="0" Foreground="Black" Canvas.Left="0" Canvas.Top="275" />
+            <TextBlock Text="255" Foreground="Black" Canvas.Left="265" Canvas.Top="275" />
+            <TextBlock Text="255" Foreground="Black" Canvas.Left="0" Canvas.Top="0" />
+            --><!-- Diagonal Line --><!--
+            <Line X1="20" Y1="275" X2="275" Y2="20" Stroke="Gray" StrokeDashArray="2 2"/>
+        </Canvas>
+
+        --><!-- Middle Area with Buttons --><!--
+        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+            <Button Content="Clear" Width="100" Height="30" Margin="10" Click="ClearButton_Click" />
+            <Button Content="Draw Spline" Width="100" Height="30" Margin="10" Click="DrawSplineButton_Click" />
+        </StackPanel>
+
+        --><!-- Right Drawing Area --><!--
+        <Canvas Name="RightDrawingCanvas" Background="White" Grid.Column="2">
+            --><!-- This will be used for drawing the spline curve --><!--
+        </Canvas>
+    </Grid>
+</Window>-->
+    
+    <!--<Window x:Class="Framework.View.SplineToolWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Framework.View"
+        mc:Ignorable="d"
+        Title="SplineToolWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        --><!-- Left Drawing Area --><!--
+        <Canvas Name="LeftDrawingCanvas" Background="White" Grid.Column="0" Margin="20,0,0,0" MouseLeftButtonDown="LeftDrawingCanvas_MouseLeftButtonDown">
+            --><!-- Coordinate System --><!--
+            <Line X1="20" Y1="0" X2="20" Y2="275" Stroke="Black" />
+            <Line X1="20" Y1="275" X2="275" Y2="275" Stroke="Black" />
+            <TextBlock Text="0" Foreground="Black" Canvas.Left="0" Canvas.Top="275" />
+            <TextBlock Text="255" Foreground="Black" Canvas.Left="265" Canvas.Top="275" />
+            <TextBlock Text="255" Foreground="Black" Canvas.Left="0" Canvas.Top="0" />
+            --><!-- Diagonal Line --><!--
+            <Line X1="20" Y1="275" X2="275" Y2="20" Stroke="Gray" StrokeDashArray="2 2"/>
+        </Canvas>
+
+        --><!-- Middle Button --><!--
+        <Button Content="Draw Spline" Grid.Column="1" Width="100" Height="30" Margin="10" Click="DrawSplineButton_Click" />
+
+        --><!-- Right Drawing Area --><!--
+        <Canvas Name="RightDrawingCanvas" Background="White" Grid.Column="2">
+            --><!-- This will be used for drawing the spline curve --><!--
+        </Canvas>
+    </Grid>
+</Window>-->
+    
+    <!--<Window x:Class="Framework.View.SplineToolWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Framework.View"
+        mc:Ignorable="d"
+        Title="SplineToolWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        --><!-- Left Drawing Area --><!--
+        <Canvas Name="LeftDrawingCanvas" Background="White" Grid.Column="0" Margin="20,0,0,0" MouseLeftButtonDown="LeftDrawingCanvas_MouseLeftButtonDown">
+            --><!-- Coordinate System --><!--
+            <Line X1="20" Y1="0" X2="20" Y2="255" Stroke="Black" />
+            <Line X1="20" Y1="255" X2="275" Y2="255" Stroke="Black" />
+            <TextBlock Text="0" Foreground="Black" Canvas.Left="0" Canvas.Top="255" />
+            <TextBlock Text="255" Foreground="Black" Canvas.Left="265" Canvas.Top="255" />
+            <TextBlock Text="255" Foreground="Black" Canvas.Left="0" Canvas.Top="0" />
+            --><!-- Diagonal Line --><!--
+            <Line X1="20" Y1="255" X2="275" Y2="0" Stroke="Gray" StrokeDashArray="2 2"/>
+        </Canvas>
+
+        --><!-- Middle Button --><!--
+        <Button Content="Draw Spline" Grid.Column="1" Width="100" Height="30" Margin="10" />
+
+        --><!-- Right Drawing Area --><!--
+        <Canvas Name="RightDrawingCanvas" Background="White" Grid.Column="2">
+            --><!-- This will be used for drawing the spline curve --><!--
+        </Canvas>
+    </Grid>
+</Window>-->
